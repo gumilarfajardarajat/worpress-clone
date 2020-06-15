@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="popover-slot d-none">
+            <div class="position-absolute border bg-white" style="z-index: 999; top:100px">
+                <ul class="list-inline m-0">
+                    <li class="list-inline-item mr-0">
+                        <button class="btn btn-lg btn-block" id="btnBold">
+                            <i class="fa fa-bold" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li class="list-inline-item mr-0">
+                        <button class="btn btn-lg btn-block" id="btnItalic">
+                            <i class="fa fa-italic" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <li class="list-inline-item mr-0">
+                        <button class="btn btn-lg btn-block" id="btnUnderline">
+                            <i class="fa fa-underline" aria-hidden="true"></i>
+                        </button>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="entry-title">
+            <div class="form-group">
+                <textarea name="" id="" rows="1" class="form-control title-input" placeholder="Add title"></textarea>
+            </div>
+        </div>
+        <div class="entry-content">
+            <p role="textbox" contenteditable="true" class="border-0 paragraph-input">
+                <span data-placeholder="Start writing or type / to choose a block" contenteditable="false"></span>
+            </p>
+        </div>
+        <div class="row">
+            <div class="btn btn-primary" id="btn-mining">Mining</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.1.0"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

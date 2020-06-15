@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.1.0"></script>
+    <title>Home</title>
+    <style>
+        .card {
+            background-color: orange;
+            height: 200px;
+        }
+        
+        .placeholder {
+            opacity: 0.4;
+        }
+        
+        .placeholder::after {
+            content: attr(data-value);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="entry-content">
+        <p class="input-paragraph" contenteditable="true">
+            <span class="placeholder" data-value="Apa yang anda pikirkan ?"></span>
+        </p>
+    </div>
+
+
+
+    <script>
+        $('.input-paragraph').on('click', function(e) {
+            $(this).children('span').remove();
+            e.stopPropagation();
+        });
+
+        $('.input-paragraph').on('focusout', function(e) {
+            var temp = $(this).html();
+            if (!temp) {
+                $(this).append('<span class="placeholder" data-value="Apa yang anda pikirkan ?"></span>');
+            }
+        });
+
+        $('.input-paragraph').on('keydown', function(event) {
+            if (event.keyCode == 13 && !event.shiftKey) {
+                console.log('new Line');
+            }
+        });
+    </script>
+</body>
+
+</html>

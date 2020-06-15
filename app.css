@@ -1,0 +1,22 @@
+.title-input {
+  font-size: 40.2272px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+}
+
+.paragraph-input {
+  font-size: 20px;
+  font-weight: 400px;
+}
+
+.paragraph-input span::after {
+  content: attr(data-placeholder);
+  opacity: 0.62;
+}
+
+.paragraph-input:focus {
+  border: none;
+  outline: 0px solid transparent;
+}
+/*# sourceMappingURL=app.css.map */
